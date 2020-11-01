@@ -1,10 +1,5 @@
 <?php
-spl_autoload_register(function ($class) {
-    $class = str_replace("Karamel\\Console\\", "", $class);
-    $class = str_replace("\\", "/", $class);
-    require_once __DIR__ . '/src/' . $class . '.php';
-});
-
+require_once __DIR__ . "/vendor/autoload.php";
 
 define("CONTROLLER_NAMESPACE", "App/Http/Controller");
 define("MODEL_NAMESPACE", "App/Model");

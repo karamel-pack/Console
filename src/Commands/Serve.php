@@ -8,7 +8,8 @@ class Serve implements ICommand
 {
     public static function define()
     {
-        global $argv;
+        get_console_args("amir");
+        /*global $argv;
         $port = 8080;
         $public = "public/";
         foreach ($argv as $key => $item) {
@@ -29,6 +30,6 @@ class Serve implements ICommand
         }
 
         echo "Server has been start at :" . $port . " And Document root is " . $public . "\n";
-        exec('php -S localhost:' . $port . ' -t ' . $public);
+        exec('php -S localhost:' . $port . ' -t ' . $public);*/
     }
 }
