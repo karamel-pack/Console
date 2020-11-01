@@ -5,7 +5,13 @@ spl_autoload_register(function ($class) {
     require_once __DIR__ . '/src/' . $class . '.php';
 });
 
-\Karamel\Console\Commands\Boot::start();
 
-//$console = new \Karamel\Console\Console();
-//$console->run($argv[1]);
+try {
+    $console = new \Karamel\Console\Console();
+
+    \Karamel\Console\Commands\Boot::start($console);
+
+    $console->run($argv[1]);
+} catch (\Exception $exception) {
+    var_dump($exception);
+}

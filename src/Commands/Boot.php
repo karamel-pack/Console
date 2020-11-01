@@ -5,9 +5,8 @@ use Karamel\Console\Console;
 
 class Boot
 {
-    public static function start()
+    public static function start(Console $console)
     {
-        $console = new Console();
         $console->add("make:model","Create Model" , '\Karamel\Commands\Make\Model::define');
 //        Console::add("make:model","Create Model" , '\Karamel\Commands\Make\Model::define');
 

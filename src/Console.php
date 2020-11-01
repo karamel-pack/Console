@@ -19,18 +19,21 @@ class Console
         if (isset($this->commands[$name]))
             throw new ExistsCommandNameException();
 
-        $this->commands[] = [
+        $this->commands[$name] = [
             "name" => $name,
             "description" => $description,
             "callback" => $callback
         ];
 
+        var_dump($this->commands);
+
     }
 
     public function run($name)
     {
+        var_dump($this->commands);
         if (!isset($this->commands[$name]))
-            throw new CommandNotFoundException();
+            throw new CommandNotFoundException("Command ". $name." Not Found !");
 
         return $this->commands[$name]["callback"]();
     }
