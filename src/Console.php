@@ -7,7 +7,7 @@ use Karamel\Console\Exceptions\ExistsCommandNameException;
 
 class Console
 {
-    private $commands = [];
+    private $commands;
 
     public function __construct()
     {

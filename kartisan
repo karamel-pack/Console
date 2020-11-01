@@ -5,3 +5,7 @@ spl_autoload_register(function ($class) {
     require_once __DIR__ . '/src/' . $class . '.php';
 });
 
+\Karamel\Console\Commands\Boot::start();
+
+//$console = new \Karamel\Console\Console();
+//$console->run($argv[1]);
