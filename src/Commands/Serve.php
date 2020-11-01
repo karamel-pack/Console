@@ -8,28 +8,10 @@ class Serve implements ICommand
 {
     public static function define()
     {
-        get_console_args("amir");
-        /*global $argv;
-        $port = 8080;
-        $public = "public/";
-        foreach ($argv as $key => $item) {
-            $tmp = explode("=", $item);
-            if (count($tmp) === 2) {
-                if ($tmp[0] === "--port")
-                    $port = $tmp[1];
 
-            }
-        }
-        foreach ($argv as $key => $item) {
-            $tmp = explode("=", $item);
-            if (count($tmp) === 2) {
-                if ($tmp[0] === "--t")
-                    $public = $tmp[1];
-
-            }
-        }
-
+        $port = get_console_args("--port",8000);
+        $public = get_console_args("--t","public/");
         echo "Server has been start at :" . $port . " And Document root is " . $public . "\n";
-        exec('php -S localhost:' . $port . ' -t ' . $public);*/
+        exec('php -S localhost:' . $port . ' -t ' . $public);
     }
 }
