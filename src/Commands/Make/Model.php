@@ -2,7 +2,8 @@
 
 namespace Karamel\Console\Commands\Make;
 
-use Karamel\Console\Commands\Interfaces\ICommand;
+
+use Karamel\Console\Interfaces\ICommand;
 
 class Model implements ICommand
 {
@@ -17,6 +18,7 @@ class Model implements ICommand
 
         global $argv;
         var_dump($argv);
+        return "hiii";
 
     }
 }
