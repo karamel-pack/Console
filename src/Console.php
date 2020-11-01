@@ -2,7 +2,6 @@
 
 namespace Karamel\Console;
 
-use Karamel\Console\Commands\Make\Model;
 use Karamel\Console\Exceptions\CommandNotFoundException;
 use Karamel\Console\Exceptions\ExistsCommandNameException;
 
@@ -30,11 +29,9 @@ class Console
 
     public function run($name)
     {
-        $model = Model::define();
-
         if (!isset($this->commands[$name]))
             throw new CommandNotFoundException("Command ". $name." Not Found !");
 
-//        return $this->commands[$name]["callback"]();
+        return $this->commands[$name]["callback"]();
     }
 }
