@@ -7,7 +7,7 @@ class Boot
 {
     public static function start()
     {
-        Console::add("make:controller","Create Controller" , '\Karamel\Commands\Make');
+        Console::add("make:model","Create Model" , '\Karamel\Commands\Make');
 
     }
 }
