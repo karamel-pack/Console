@@ -6,6 +6,7 @@ use Karamel\Console\Interfaces\ICommand;
 
 class Serve implements ICommand
 {
+
     public static function define()
     {
 

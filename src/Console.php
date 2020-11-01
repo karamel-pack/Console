@@ -9,6 +9,7 @@ class Console
 {
     private $commands;
 
+
     public function __construct()
     {
         $this->commands = [];

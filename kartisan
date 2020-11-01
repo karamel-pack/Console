@@ -4,11 +4,10 @@ require_once __DIR__ . "/vendor/autoload.php";
 define("CONTROLLER_NAMESPACE", "App/Http/Controller");
 define("MODEL_NAMESPACE", "App/Model");
 try {
-    $console = new \Karamel\Console\Console();
 
-    \Karamel\Console\Commands\Boot::start($console);
+    \Karamel\Console\Commands\Boot::start();
+    \Karamel\Console\Facade\Console::run($argv[1]);
 
-    $console->run($argv[1]);
 } catch (\Exception $exception) {
     var_dump($exception);
 }

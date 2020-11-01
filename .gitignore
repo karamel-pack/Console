@@ -11,4 +11,4 @@
 
 # Cursive Clojure plugin
 .idea/replstate.xml
-Test.php
+src/Commands/Test.php
