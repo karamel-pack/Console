@@ -6,7 +6,8 @@ spl_autoload_register(function ($class) {
 });
 
 
-define("CONTROLLER_NAMESPACE","App/Http/Controller");
+define("CONTROLLER_NAMESPACE", "App/Http/Controller");
+define("MODEL_NAMESPACE", "App/Model");
 try {
     $console = new \Karamel\Console\Console();
 
